@@ -27,4 +27,4 @@ jobs:
 
       - name: S3 기존 파일들 전체 삭제
         run: |
-          aws S3 rm -recursive s3://practice-aws-react-pokemon
+          aws S3 rm --recursive s3://practice-aws-react-pokemon
