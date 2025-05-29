@@ -28,3 +28,6 @@ jobs:
       - name: S3 기존 파일들 전체 삭제
         run: |
           aws s3 rm --recursive s3://practice-aws-react-pokemon
+
+      - name: S4 에 빌드된 파일 업로드하기
+        run: aws cp ./dist s3://practice-aws-react-pokemon/ --recursive
