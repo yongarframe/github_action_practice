@@ -5,10 +5,18 @@ on:
     branches:
       - main
 
+#여러개의 Job 으로 이루어 질 수 있다.
 jobs:
-  My-Deploy-Job:
+  My-Deploy-Job: # 이름을 붙인것
     runs-on: ubuntu-latest
-
+    #하나의 Job 은 여러개의 Step 으로
     steps:
-      - name: Hellow World 출력하기
+      - name: Hellow World 출력하기 # 이름을 붙인것
         run: echo "Hello World"
+
+      - name: 여러 명령어 문장 작성하기
+        run: |
+          echo "Good"
+          echo "Morning"
+          ls
+          pwd
